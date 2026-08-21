@@ -1,0 +1,249 @@
+@import '../../styles/global.scss';
+
+.section {
+  width: 100%;
+  max-width: 1600px;
+  margin: 6rem auto;
+  padding: 0 3rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1.5rem;
+    margin: 4rem auto;
+  }
+
+  /* Шапка секции */
+  .header {
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .titleGroup {
+      h2 {
+        font-family: $font-heading;
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+        color: $text-main;
+      }
+
+      p {
+        color: $text-muted;
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Бейдж с рейтингом в едином стиле с кнопками */
+    .ratingBadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: $bg-dark;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-family: $font-heading;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+
+      .starIcon {
+        color: #ffb703;
+        fill: #ffb703;
+      }
+    }
+  }
+
+  /* Сетка карточек преимуществ */
+  .cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-bottom: 6rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid $border-light;
+    padding: 2.5rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .icon {
+      color: $accent-terracotta;
+    }
+
+    h3 {
+      font-family: $font-heading;
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    p {
+      color: $text-muted;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+  }
+
+  /* Секция отзывов */
+  .reviewsHeader {
+    margin-bottom: 2.5rem;
+
+    h3 {
+      font-family: $font-heading;
+      font-size: clamp(1.8rem, 3vw, 2.2rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .reviewsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .reviewCard {
+    background: #fff;
+    border: 1px solid $border-light;
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    }
+
+    .authorInfo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: $accent-terracotta;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-family: $font-heading;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+
+      .authorMeta {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-family: $font-heading;
+          font-weight: 800;
+          font-size: 1.05rem;
+          color: $text-main;
+          text-transform: uppercase;
+          letter-spacing: 0.01em;
+        }
+
+        .date {
+          font-size: 0.8rem;
+          color: $text-muted;
+          margin-top: 0.1rem;
+        }
+      }
+    }
+
+    .stars {
+      display: flex;
+      gap: 0.25rem;
+      color: #ffb703;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .comment {
+      color: $text-main;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Фотография из заведения */
+    .photoContainer {
+      width: 100%;
+      height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-top: 0.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: scale(1.04);
+        }
+      }
+    }
+
+    /* Теги карточек */
+    .tag {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(184, 74, 40, 0.08);
+      color: $accent-terracotta;
+      font-family: $font-heading;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.4rem 0.8rem;
+      border-radius: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+}

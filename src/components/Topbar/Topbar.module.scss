@@ -1,0 +1,115 @@
+@import '../../styles/global.scss';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(253, 251, 247, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid $border-light;
+  transition: all 0.3s ease;
+
+  .inner {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  .logoLink {
+    display: flex;
+    align-items: center;
+    
+    .logoImg {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      filter: brightness(0);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    gap: 3rem;
+
+    @media (max-width: 868px) {
+      display: none;
+    }
+
+    a {
+      font-family: $font-heading;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0.2rem 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $accent-terracotta;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $accent-terracotta;
+      }
+    }
+
+    .ratingBadge {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: $bg-dark;
+      color: #fff;
+      padding: 0.45rem 0.9rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+
+      .star {
+        color: #ffb703;
+        fill: #ffb703;
+      }
+    }
+  }
+}
