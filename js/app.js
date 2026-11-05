@@ -317,6 +317,17 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCart();
   });
 
+  const toTop = document.createElement('button');
+  toTop.type = 'button';
+  toTop.className = 'to-top';
+  toTop.setAttribute('aria-label', 'Наверх');
+  toTop.innerHTML = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M4 11.5 9 6.5l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  document.body.appendChild(toTop);
+  const toggleToTop = () => toTop.classList.toggle('is-visible', window.scrollY > 320);
+  toggleToTop();
+  window.addEventListener('scroll', toggleToTop, { passive: true });
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
   document.getElementById('feedbackForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
     const form = e.currentTarget;

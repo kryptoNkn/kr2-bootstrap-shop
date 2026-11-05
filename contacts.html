@@ -16,6 +16,7 @@
       <nav class="nav">
         <a href="index.html">Главная</a>
         <a href="menu.html">Меню</a>
+        <a href="about.html">О нас</a>
         <a href="contacts.html" class="active">Контакты</a>
       </nav>
       <div class="header-actions">
@@ -29,27 +30,12 @@
     </div>
     <div class="collapse" id="mobileNav">
       <nav class="mobile-nav">
-        <a href="index.html">Главная</a><a href="menu.html">Меню</a><a href="contacts.html">Контакты</a><a href="cart.html">Корзина</a>
+        <a href="index.html">Главная</a><a href="menu.html">Меню</a><a href="about.html">О нас</a><a href="contacts.html">Контакты</a><a href="cart.html">Корзина</a>
       </nav>
     </div>
   </header>
   <main>
     <section class="section" style="margin-top:8rem">
-      <div class="about-grid">
-        <div>
-          <span class="tag-chip">О нас</span>
-          <h1 class="section-title" style="margin:1rem 0">SIP Coffee</h1>
-          <p class="subtitle" style="max-width:560px">Спешелти-кофейня в Газетном переулке: свежая обжарка, завтраки весь день и спокойный зал со светлым кирпичом и деревом. Сюда приходят за фильтром, сырниками и тишиной в центре Москвы.</p>
-        </div>
-        <div class="gallery">
-          <img src="public/images/review-1.jpg" alt="Интерьер SIP Coffee">
-          <img src="public/images/review-2.jpg" alt="Гости кофейни">
-          <img src="public/images/review-3.jpg" alt="Зал кофейни">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" style="margin-top:0">
       <div class="section-head">
         <div>
           <h2 class="section-title">Где мы находимся</h2>
@@ -117,26 +103,36 @@
       </div>
     </section>
 
-    <section class="section" style="margin-top:0">
-      <div class="contact-grid">
-        <div>
-          <h2 class="section-title" style="font-size:clamp(1.8rem,3vw,2.2rem)">Обратная связь</h2>
-          <p class="subtitle">Напишите, если хотите забронировать стол или задать вопрос</p>
-        </div>
-        <form class="panel form" id="feedbackForm" style="padding:2rem" novalidate>
-          <div class="field"><label for="fbName">Имя</label><input id="fbName" name="name" required></div>
-          <div class="field"><label for="fbEmail">Почта</label><input id="fbEmail" name="email" type="email" required></div>
-          <div class="field"><label for="fbMsg">Сообщение</label><textarea id="fbMsg" name="message" required></textarea></div>
-          <button class="btn-dark" type="submit">Отправить</button>
-          <p class="form-note" id="feedbackNote"></p>
-        </form>
+    <section class="section feedback-section" style="margin-top:0">
+      <div class="feedback-copy">
+        <h2 class="section-title">Обратная связь</h2>
+        <p class="subtitle">Напишите, если хотите забронировать стол, уточнить заказ или просто спросить про меню.</p>
+        <p>Отвечаем в тот же день, обычно в течение часа, пока кофейня открыта. Для брони укажите дату, время и сколько вас будет — оставим место у окна или у дивана.</p>
+        <ul>
+          <li>Бронь стола на компанию</li>
+          <li>Вопросы по заказу и доставке</li>
+          <li>Предложения и отзывы о зале</li>
+        </ul>
       </div>
+      <form class="panel form feedback-card" id="feedbackForm" novalidate>
+        <div class="field"><label for="fbName">Имя</label><input id="fbName" name="name" required placeholder="Как к вам обращаться"></div>
+        <div class="field"><label for="fbEmail">Почта</label><input id="fbEmail" name="email" type="email" required placeholder="name@mail.ru"></div>
+        <div class="field"><label for="fbMsg">Сообщение</label><textarea id="fbMsg" name="message" required placeholder="Стол, время или вопрос"></textarea></div>
+        <button class="btn-dark" type="submit">Отправить</button>
+        <p class="form-note" id="feedbackNote"></p>
+      </form>
     </section>
   </main>
   <footer class="footer">
     <div class="footer-inner">
       <img src="public/images/logo.png" alt="SIP Coffee" class="logo-img">
-      <div class="copyright">© WaterMelonStudios 2026. Артемов А.С. ЭФБО-11-25</div>
+      <div class="footer-links">
+        <a href="https://yandex.ru/maps/org/122754033471" target="_blank" rel="noreferrer">Москва, Газетный переулок, 3</a>
+        <a href="https://telegram.me/sipcoffeemoscow" target="_blank" rel="noreferrer">Telegram: @sipcoffeemoscow</a>
+        <a class="footer-phone" href="tel:+79587512149"><span>+7 (958) 751-21-49</span><span class="footer-hours">Пн–пт 08:00–22:00 · Сб–вс 10:00–22:00</span></a>
+      </div>
+      <div class="legal">Индивидуальный предприниматель Дурасов Семен Михайлович<br>ОГРНИП: 320774600340580 | ИНН: 772075470057</div>
+      <div class="copyright">© SIP Coffee <span id="year">2026</span>. Все права защищены.</div>
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

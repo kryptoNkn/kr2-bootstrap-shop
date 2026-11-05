@@ -16,6 +16,7 @@
       <nav class="nav">
         <a href="index.html" class="active">Главная</a>
         <a href="menu.html">Меню</a>
+        <a href="about.html">О нас</a>
         <a href="contacts.html">Контакты</a>
       </nav>
       <div class="header-actions">
@@ -34,6 +35,7 @@
       <nav class="mobile-nav">
         <a href="index.html">Главная</a>
         <a href="menu.html">Меню</a>
+        <a href="about.html">О нас</a>
         <a href="contacts.html">Контакты</a>
         <a href="cart.html">Корзина</a>
       </nav>
@@ -135,6 +137,41 @@
       </div>
       <div class="row g-4 cards-products" id="popularGrid"></div>
     </section>
+
+    <section class="section container" style="margin-top:1rem">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Частые вопросы</h2>
+          <p class="subtitle">Коротко о заказе, зале и вечерней скидке</p>
+        </div>
+      </div>
+      <div class="faq">
+        <article class="faq-item">
+          <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+            <span>Можно ли заказать заранее?</span>
+          </button>
+          <div class="collapse" id="faq1"><p class="faq-a">Да, заказ можно собрать заранее. Добавьте напитки и десерты в корзину, выберите самовывоз или доставку и удобное время приготовления — бариста начнёт готовить к указанному часу, чтобы заказ не остыл. Самовывоз бесплатный, доставка по центру Москвы — 350 ₽. Если планы изменятся, напишите в Telegram или позвоните: заказ можно перенести или отменить до начала приготовления.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            <span>Завтраки только утром?</span>
+          </button>
+          <div class="collapse" id="faq2"><p class="faq-a">Нет, завтраки не привязаны к утру. Сырники со сметаной, вареньем или сгущёнкой, круассаны с лососем и моцареллой, сэндвичи и горячие завтраки подаём весь день, пока кофейня открыта. Свежую выпечку выставляем с открытия и допекаем в течение дня, поэтому к вечеру на витрине тоже есть тёплые позиции. Если нужна конкретная позиция к определённому времени, лучше заказать её заранее.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            <span>Можно ли прийти с собакой?</span>
+          </button>
+          <div class="collapse" id="faq3"><p class="faq-a">Да, SIP — dog friendly кофейня: собаки любого размера могут быть в зале вместе с вами. У входа стоит миска со свежей водой, а бариста подскажет, где удобнее сесть, если зал уже заполнен. Просим держать питомца на поводке и рядом со столом, чтобы другим гостям было спокойно. Если хотите место у окна или у дивана, напишите заранее — постараемся оставить его свободным.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-q" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            <span>Когда действует скидка 20%?</span>
+          </button>
+          <div class="collapse" id="faq4"><p class="faq-a">Скидка 20% действует каждый день с 19:00 до 22:00 на кухню и выпечку с витрины — напитки в это время считаются по обычной цене. В зале скидка применяется на кассе автоматически, отдельно говорить о ней не нужно. На сайте тот же размер даёт промокод SIP20: введите его в корзине до оформления заказа, и сумма пересчитается сразу. Промокод не суммируется с другими акциями и действует на весь чек, включая доставку, если она есть в заказе.</p></div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -143,10 +180,10 @@
       <div class="footer-links">
         <a href="https://yandex.ru/maps/org/122754033471" target="_blank" rel="noreferrer">Москва, Газетный переулок, 3</a>
         <a href="https://telegram.me/sipcoffeemoscow" target="_blank" rel="noreferrer">Telegram: @sipcoffeemoscow</a>
-        <a href="tel:+79587512149">+7 (958) 751-21-49</a>
+        <a class="footer-phone" href="tel:+79587512149"><span>+7 (958) 751-21-49</span><span class="footer-hours">Пн–пт 08:00–22:00 · Сб–вс 10:00–22:00</span></a>
       </div>
       <div class="legal">Индивидуальный предприниматель Дурасов Семен Михайлович<br>ОГРНИП: 320774600340580 | ИНН: 772075470057</div>
-      <div class="copyright">© WaterMelonStudios <span id="year">2026</span>. Артемов А.С. ЭФБО-11-25</div>
+      <div class="copyright">© SIP Coffee <span id="year">2026</span>. Все права защищены.</div>
     </div>
   </footer>
 
