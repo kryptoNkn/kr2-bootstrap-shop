@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — SIP Coffee</title>
+  <link rel="icon" type="image/png" href="public/images/logoblack.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-page="cart">
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link"><img src="public/images/logo.png" alt="SIP Coffee" class="logo-img"></a>
+      <nav class="nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+79587512149" class="phone"><span>+7 (958) 751-21-49</span></a>
+        <a href="cart.html" class="cart-link">Корзина <span class="cart-count" data-cart-count>0</span></a>
+        <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-label="Меню">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="collapse" id="mobileNav">
+      <nav class="mobile-nav">
+        <a href="index.html">Главная</a><a href="menu.html">Меню</a><a href="contacts.html">Контакты</a><a href="cart.html">Корзина</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="page-hero">
+      <h1 class="section-title">Корзина</h1>
+      <p class="subtitle">Размер, добавки и способ получения учитываются в сумме</p>
+    </div>
+    <section class="section" style="margin-top:2rem">
+      <div class="cart-grid">
+        <div class="panel" style="padding:1.5rem 1.8rem">
+          <div id="cartList"></div>
+          <h2 class="section-title" style="font-size:1.4rem;margin:2rem 0 0.5rem">История заказов</h2>
+          <div id="historyList"></div>
+        </div>
+        <aside class="panel summary">
+          <h2 class="section-title" style="font-size:1.5rem;margin-bottom:1rem">Заказ</h2>
+          <p class="label">Промокод</p>
+          <div class="promo-row">
+            <input id="promoInput" placeholder="SIP20">
+            <button class="btn-ghost btn-sm" type="button" id="applyPromo">Ок</button>
+          </div>
+          <p class="form-note" id="promoNote"></p>
+          <p class="label">Получение</p>
+          <div class="choice">
+            <button type="button" class="active" data-method="pickup">Самовывоз</button>
+            <button type="button" data-method="delivery">Доставка</button>
+          </div>
+          <form id="checkoutForm" class="form" style="margin-top:1rem" novalidate>
+            <div class="field" id="addressField" hidden>
+              <label for="address">Адрес доставки</label>
+              <input id="address" name="address">
+            </div>
+            <div class="field">
+              <label for="time">Время приготовления</label>
+              <select id="time" name="time" required>
+                <option value="">Выберите время</option>
+                <option>Как можно скорее</option>
+                <option>Через 20 минут</option>
+                <option>Через 40 минут</option>
+                <option>Через 60 минут</option>
+              </select>
+            </div>
+            <div class="field"><label for="name">Имя</label><input id="name" name="name" required></div>
+            <div class="field"><label for="phone">Телефон</label><input id="phone" name="phone" type="tel" required placeholder="+7"></div>
+            <div class="summary-row"><span>Сумма</span><span id="sumSub">0 ₽</span></div>
+            <div class="summary-row"><span>Скидка</span><span id="sumDiscount">0 ₽</span></div>
+            <div class="summary-row"><span>Доставка</span><span id="sumDelivery">0 ₽</span></div>
+            <div class="total-row"><span>Итого</span><span id="sumTotal">0 ₽</span></div>
+            <button class="btn-dark" type="submit">Оформить заказ</button>
+            <p class="form-note" id="orderNote"></p>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="copyright">© WaterMelonStudios 2026. Артемов А.С. ЭФБО-11-25</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

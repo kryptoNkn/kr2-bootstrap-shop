@@ -1,13 +1,174 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/logoblack.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIP Coffee — Спешелти Кофейня</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Coffee — Спешелти Кофейня</title>
+  <link rel="icon" type="image/png" href="public/images/logoblack.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-page="home">
+  <header class="header">
+    <div class="header-inner container-fluid d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo-link"><img src="public/images/logo.png" alt="SIP Coffee" class="logo-img"></a>
+      <nav class="nav">
+        <a href="index.html" class="active">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a href="tel:+79587512149" class="phone">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.35 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+7 (958) 751-21-49</span>
+        </a>
+        <div class="rating-badge"><svg class="star" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2l2.9 6.6L22 9.2l-5 4.6L18.2 21 12 17.6 5.8 21 7 13.8 2 9.2l7.1-.6z"/></svg><span>5.0</span></div>
+        <a href="cart.html" class="cart-link">Корзина <span class="cart-count" data-cart-count>0</span></a>
+        <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-label="Меню">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="collapse" id="mobileNav">
+      <nav class="mobile-nav">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="cart.html">Корзина</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container-fluid">
+      <div class="bg-grid"></div>
+      <div class="hero-inner container">
+        <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-7">
+        <div class="hero-content">
+          <div class="tag">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8h1a4 4 0 0 1 0 8h-1M3 8h14v5a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6V8zM6 2v3M10 2v3M14 2v3"/></svg>
+            <span>Спешелти Кофейня • Газетный, 3</span>
+          </div>
+          <h1>SIP: Завтраки <br><span class="highlight">& Летний Special</span></h1>
+          <p class="hero-desc">Свежеобжаренный кофе, эстетичные завтраки весь день и авторские напитки в тихом центре Москвы.</p>
+          <div class="cta-group">
+            <a href="menu.html" class="btn-primary">Посмотреть меню
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="contacts.html" class="btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Как добраться
+            </a>
+          </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-5">
+        <div class="promo-card">
+          <div class="promo-glow"></div>
+          <div class="promo-top">
+            <div class="time-tag">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z"/></svg>
+              После 19:00
+            </div>
+            <div class="discount-badge">−20%</div>
+          </div>
+          <div class="special-header">
+            <h3>Evening Hours Special</h3>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c88d51" stroke-width="2"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5zM19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></svg>
+          </div>
+          <p class="promo-text">Приходите на вечерние сет-завтраки, горячую кухню и свежую выпечку с витрины со скидкой 20%.</p>
+          <div class="promo-footer">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v6l4 2"/></svg>
+            Действует ежедневно с 19:00 до 22:00
+          </div>
+          <div class="promo-list">
+            <div class="promo-mini"><span>Промокод <strong>SIP20</strong> на сайте</span><span>−20%</span></div>
+            <div class="promo-mini"><span>Второй десерт к кофе</span><span>−10%</span></div>
+          </div>
+        </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head d-flex align-items-end justify-content-between flex-wrap">
+        <div>
+          <h2 class="section-title mb-0">Почему SIP</h2>
+          <p class="subtitle mb-0">Качественный кофе, свежая выпечка и уютная атмосфера</p>
+        </div>
+      </div>
+      <div class="row g-4 cards-3">
+        <div class="col-12 col-md-6 col-lg-4">
+        <article class="card">
+          <svg class="icon-lg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 8h1a4 4 0 0 1 0 8h-1M3 8h14v5a6 6 0 0 1-6 6H9a6 6 0 0 1-6-6V8z"/></svg>
+          <h3>Качественный кофе</h3>
+          <p>Спешелти-зерно, воронка, аэропресс и классика на молоке — каждый напиток собираем под ваш вкус.</p>
+        </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <article class="card">
+          <svg class="icon-lg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 10h16M6 10c0 6 2 10 6 10s6-4 6-10M8 6c1-2 2-2 4-2s3 0 4 2"/></svg>
+          <h3>Свежая выпечка</h3>
+          <p>Сырники, круассаны и десерты с витрины готовим в течение дня, а после 19:00 на кухню действует скидка.</p>
+        </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <article class="card">
+          <svg class="icon-lg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10z"/></svg>
+          <h3>Уютная атмосфера</h3>
+          <p>Светлый кирпич, дерево и тихий зал в Газетном переулке. Можно работать, встречаться и приходить с собакой.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" style="margin-top:0">
+      <div class="section-head d-flex align-items-end justify-content-between flex-wrap">
+        <div>
+          <h2 class="section-title mb-0">Популярные напитки</h2>
+          <p class="subtitle mb-0">То, что заказывают чаще всего</p>
+        </div>
+        <a href="menu.html" class="btn-ghost">Всё меню</a>
+      </div>
+      <div class="row g-4 cards-products" id="popularGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="public/images/logo.png" alt="SIP Coffee" class="logo-img">
+      <div class="footer-links">
+        <a href="https://yandex.ru/maps/org/122754033471" target="_blank" rel="noreferrer">Москва, Газетный переулок, 3</a>
+        <a href="https://telegram.me/sipcoffeemoscow" target="_blank" rel="noreferrer">Telegram: @sipcoffeemoscow</a>
+        <a href="tel:+79587512149">+7 (958) 751-21-49</a>
+      </div>
+      <div class="legal">Индивидуальный предприниматель Дурасов Семен Михайлович<br>ОГРНИП: 320774600340580 | ИНН: 772075470057</div>
+      <div class="copyright">© WaterMelonStudios <span id="year">2026</span>. Артемов А.С. ЭФБО-11-25</div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="optModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header"><h5 class="modal-title" id="optTitle"></h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+        <div class="modal-body">
+          <p class="muted" id="optDesc"></p>
+          <p class="label" style="margin-top:1rem">Размер</p>
+          <div class="options" id="optSizes"></div>
+          <p class="label" style="margin-top:1rem">Дополнительно</p>
+          <div class="options" id="optExtras"></div>
+        </div>
+        <div class="modal-footer"><span class="price" id="optPrice"></span><button class="btn-dark" style="width:auto" type="button" id="optConfirm">Добавить</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast" role="status" data-bs-delay="2200"><div class="toast-body"></div></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
