@@ -218,7 +218,7 @@ input, textarea, select {
   margin: 0;
 }
 .hero-content { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-.tag {
+.tag:not(body) {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -889,9 +889,14 @@ a.btn-primary, button.btn-primary {
   .cart-item .line-price { grid-column: 2; }
 }
 
-/* Bootstrap row/col stay in the markup; widths stay on the original grid. */
-.section.container {
+/* Bootstrap row/col stay in the markup; widths stay on the original grid.
+   These selectors also beat Bulma's .container:not(.is-max-desktop). */
+.hero-inner.container:not(.is-max-desktop),
+.section.container:not(.is-max-desktop),
+.hero-inner.container:not(.is-max-desktop):not(.is-max-widescreen),
+.section.container:not(.is-max-desktop):not(.is-max-widescreen) {
   max-width: 1600px;
+  width: 100%;
 }
 .hero-inner > .row > [class*="col-"],
 .cards-3 > [class*="col-"],
